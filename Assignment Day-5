@@ -1,0 +1,673 @@
+# Assignment Day-5
+
+# Question 1 
+# Answer
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    // Fix: Added missing semicolon
+    int marks[5] = {80, 90, 70, 60, 50}; 
+
+    printf("Student Marks System\n");
+
+    int total = 0;
+    // Fix: Array bounds are 0-4. i <= 5 causes an out-of-bounds error.
+    for(int i = 0; i < 5; i++) 
+    {
+        total += marks[i];
+    }
+
+    printf("Total = %d\n", total);
+
+    float average = total / 5.0; // Use 5.0 for float division
+    printf("Average = %f\n", average);
+
+    printf("\n");
+
+    int scores[5];
+    scores[0] = 10;
+    scores[1] = 20;
+    scores[2] = 30;
+    scores[3] = 40;
+    scores[4] = 50;
+    // Removed scores[5] = 60; (Out of bounds)
+
+    printf("Scores\n");
+    for(int i = 0; i < 5; i++)
+    {
+        printf("%d ", scores[i]);
+    }
+    printf("\n");
+
+    char subject[15]; // Increased size to fit "Programming"
+    strcpy(subject, "Programming");
+    printf("%s\n", subject);
+    printf("\n");
+
+    int attendance[5];
+    // Removed invalid index assignments like attendance["one"]
+    for(int i = 0; i < 5; i++)
+    {
+        attendance[i] = 1; 
+    }
+
+    printf("Attendance\n");
+    for(int i = 0; i < 5; i++)
+    {
+        printf("%d ", attendance[i]);
+    }
+    printf("\n");
+
+    int arr[5];
+    printf("Enter 5 numbers:\n");
+    for(int i = 0; i < 5; i++)
+    {
+        // Fix: Added '&' for scanf
+        scanf("%d", &arr[i]); 
+    }
+
+    int totalMarks = 0;
+    for(int i = 0; i < 5; i++)
+    {
+        totalMarks += arr[i];
+    }
+    printf("Total Marks = %d\n", totalMarks);
+
+    // Fix: Cannot assign a string to a char array with = 
+    char grade[5] = "A+"; 
+    printf("Grade: %s\n", grade);
+    printf("\n");
+
+    int prices[5] = {100, 200, 300, 400, 500};
+    // Fix: Use == for comparison in if-statements
+    if(prices[2] == 300) 
+    {
+        printf("Price Found\n");
+    }
+    printf("\n");
+
+    int inventory[5];
+    // Fix: Cannot assign arrays with =. Use a loop.
+    for(int i = 0; i < 5; i++)
+    {
+        inventory[i] = prices[i];
+    }
+    printf("Inventory[0]: %d\n", inventory[0]);
+    printf("\n");
+
+    float salary[5];
+    salary[0] = 50000.50;
+    printf("Salary: %f\n", salary[0]);
+    printf("\n");
+
+    char city[10];
+    strcpy(city, "Jaipur"); // Fix: Use strcpy for strings
+    printf("%s\n", city);
+    printf("\n");
+
+    int result[5];
+    for(int i = 0; i < 5; i++)
+    {
+        result[i] = i * 10;
+    }
+
+    printf("Results\n");
+    for(int i = 0; i < 5; i++)
+    {
+        printf("%d ", result[i]);
+    }
+    printf("\nProgram Finished\n");
+
+    return 0;
+}
+
+
+# Question 2
+# Answer
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int numbers[10];
+
+    printf("Array Operations Program\n");
+
+    for(int i = 0; i < 10; i++)
+    {
+        numbers[i] = (i + 1) * 10;
+    }
+
+    printf("\nNumbers Array\n");
+    // Fix: i <= 10 is out of bounds; changed to i < 10
+    for(int i = 0; i < 10; i++)
+    {
+        printf("%d ", numbers[i]);
+    }
+    printf("\n");
+
+    int sum = 0;
+    for(int i = 0; i < 10; i++)
+    {
+        sum += numbers[i]; // Fix: Was overwriting 'sum' instead of accumulating
+    }
+    printf("Sum = %d\n", sum);
+
+    float average = (float)sum / 10.0;
+    printf("Average = %.2f\n", average);
+    printf("\n");
+
+    int marks[5] = {90, 85, 80, 75, 70};
+    printf("Lowest Marks (Corrected Logic)\n");
+    int lowest = marks[0];
+    for(int i = 1; i < 5; i++)
+    {
+        if(marks[i] < lowest) // Fixed logic: to find the lowest
+        {
+            lowest = marks[i];
+        }
+    }
+    printf("%d\n", lowest);
+    printf("\n");
+
+    int attendance[5] = {1, 1, 1, 0, 1};
+    int present = 0;
+    for(int i = 0; i < 5; i++)
+    {
+        present += attendance[i];
+    }
+    printf("Present Days = %d\n", present);
+    printf("\n");
+
+    char subject[20];
+    strcpy(subject, "ComputerScience");
+    printf("%s\n", subject);
+    printf("\n");
+
+    char branch[20];
+    strcpy(branch, "IT"); // Fix: Use strcpy for string assignment
+    printf("%s\n", branch);
+    printf("\n");
+
+    char college[6] = "ACEIT"; // Properly initialized
+    printf("%s\n", college);
+    printf("\n");
+
+    int fees[5];
+    for(int i = 0; i < 5; i++)
+    {
+        fees[i] = i * 10000;
+    }
+    printf("Fees Structure\n");
+    for(int i = 0; i < 5; i++)
+    {
+        printf("%d ", fees[i]);
+    }
+    printf("\n\n");
+
+    int result[5];
+    printf("Enter 5 result values:\n");
+    for(int i = 0; i < 5; i++)
+    {
+        scanf("%d", &result[i]); // Fix: Added '&'
+    }
+
+    int totalResult = 0;
+    for(int i = 0; i < 5; i++)
+    {
+        totalResult += result[i];
+    }
+    printf("Total Result = %d\n", totalResult);
+    printf("\n");
+
+    int stock[5] = {100, 200, 300, 400, 500};
+    if(stock[2] == 300) // Fix: Used '==' for comparison
+    {
+        printf("Stock Available\n");
+    }
+    printf("\n");
+
+    int backup[5];
+    for(int i = 0; i < 5; i++) backup[i] = stock[i]; // Fix: Copy via loop
+    printf("Backup[0]: %d\n", backup[0]);
+    printf("\n");
+
+    float salary[5];
+    salary[0] = 25000.75;
+    printf("Salary: %.2f\n", salary[0]); // Fix: Use %f for float
+    printf("\n");
+
+    int inventory[5];
+    for(int i = 0; i < 5; i++) inventory[i] = i;
+    printf("Inventory\n");
+    for(int i = 0; i < 5; i++) printf("%d ", inventory[i]);
+    printf("\n");
+
+    char city[15];
+    strcpy(city, "JaipurCity");
+    printf("%s\n", city);
+    printf("\n");
+
+    int count[5];
+    for(int i = 0; i < 5; i++) count[i] = inventory[i];
+    printf("Count[0]: %d\n", count[0]);
+    printf("\nProgram Ended\n");
+
+    return 0;
+}
+
+# Question 3
+# Answer
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int marks[5] = {85, 90, 75, 60, 95};
+
+    printf("Student Result Analysis\n");
+
+    int total = 0;
+    for(int i = 0; i < 5; i++)
+    {
+        total += marks[i];
+    }
+    printf("Total = %d\n", total);
+
+    float average = (float)total / 5.0; // Fix: Use float division
+    printf("Average = %f\n", average);
+    printf("\n");
+
+    // Highest/Lowest Logic
+    int highest = marks[0];
+    for(int i = 1; i < 5; i++)
+    {
+        if(marks[i] > highest) highest = marks[i];
+    }
+    printf("Highest = %d\n", highest);
+
+    int lowest = marks[0];
+    for(int i = 1; i < 5; i++)
+    {
+        if(marks[i] < lowest) lowest = marks[i]; // Fix: < for lowest
+    }
+    printf("Lowest = %d\n", lowest);
+    printf("\n");
+
+    // Fix: Attendance bounds and logic
+    int attendance[5] = {1, 1, 0, 1, 1};
+    int present = 0;
+    for(int i = 0; i < 5; i++)
+    {
+        present += attendance[i];
+    }
+    printf("Present = %d\n", present);
+    printf("\n");
+
+    char subject[15];
+    strcpy(subject, "Programming");
+    printf("%s\n", subject);
+    printf("\n");
+
+    char branch[10];
+    printf("Enter branch name: ");
+    scanf("%s", branch); // Fix: scanf for strings does not need &
+    printf("%s\n", branch);
+    printf("\n");
+
+    int fees[5] = {50000, 60000, 70000, 80000, 90000};
+    printf("Fees\n");
+    for(int i = 0; i < 5; i++)
+    {
+        printf("%d ", fees[i]);
+    }
+    printf("\n\n");
+
+    int stock[5] = {10, 20, 30, 40, 50};
+    if(stock[2] == 30) // Fix: Use ==
+    {
+        printf("Stock Available\n");
+    }
+    printf("\n");
+
+    int backup[5];
+    for(int i = 0; i < 5; i++) backup[i] = stock[i]; // Fix: Use loop for copy
+    printf("Backup[0] = %d\n", backup[0]);
+    printf("\n");
+
+    float salary[5];
+    salary[0] = 45000.75;
+    printf("Salary = %.2f\n", salary[0]);
+    printf("\n");
+
+    int result[5];
+    printf("Enter 5 result values:\n");
+    for(int i = 0; i < 5; i++)
+    {
+        scanf("%d", &result[i]); // Fix: Added &
+    }
+
+    int totalResult = 0;
+    for(int i = 0; i < 5; i++)
+    {
+        totalResult += result[i];
+    }
+    printf("Total Result = %d\n", totalResult);
+    printf("\n");
+
+    char city[10];
+    strcpy(city, "Jaipur");
+    printf("%s\n", city);
+    printf("\n");
+
+    // Fix: Corrected invalid array index usage and loop bounds
+    int inventory[5];
+    for(int i = 0; i < 5; i++)
+    {
+        inventory[i] = i * 100;
+    }
+    printf("Inventory\n");
+    for(int i = 0; i < 5; i++)
+    {
+        printf("%d ", inventory[i]);
+    }
+    printf("\n\n");
+
+    char college[6] = "ACEIT";
+    printf("%s\n", college);
+    printf("\n");
+
+    // Final cleanup of remaining variables
+    char course[15];
+    strcpy(course, "Computer");
+    printf("%s\n", course);
+    printf("\n");
+
+    int numbers[5];
+    for(int i = 0; i < 5; i++)
+    {
+        numbers[i] = i * 10;
+    }
+    printf("Numbers\n");
+    for(int i = 0; i < 5; i++)
+    {
+        printf("%d ", numbers[i]);
+    }
+    printf("\nProgram Finished\n");
+
+    return 0;
+}
+
+# Question 4
+# Answer
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int sales[5] = {100, 200, 300, 400, 500};
+
+    printf("Sales Report System\n");
+
+    int totalSales = 0;
+    for(int i = 0; i < 5; i++)
+    {
+        totalSales += sales[i];
+    }
+    printf("Total Sales = %d\n", totalSales);
+
+    float averageSales = (float)totalSales / 5.0; // Fix: Use float for average
+    printf("Average Sales = %.2f\n", averageSales);
+    printf("\n");
+
+    // Fix: Corrected logic to find highest sale
+    int highestSale = sales[0];
+    for(int i = 1; i < 5; i++)
+    {
+        if(sales[i] > highestSale)
+        {
+            highestSale = sales[i];
+        }
+    }
+    printf("Highest Sale = %d\n", highestSale);
+    printf("\n");
+
+    // Fix: Removed out-of-bounds index monthlySales[5]
+    int monthlySales[5] = {120, 140, 160, 180, 200};
+    printf("Monthly Sales\n");
+    for(int i = 0; i < 5; i++)
+    {
+        printf("%d ", monthlySales[i]);
+    }
+    printf("\n\n");
+
+    char product[20];
+    strcpy(product, "LaptopComputer");
+    printf("%s\n", product);
+    printf("\n");
+
+    char category[20];
+    strcpy(category, "Electronics"); // Fix: Use strcpy
+    printf("%s\n", category);
+    printf("\n");
+
+    // Fix: Corrected invalid index usage
+    int stock[5];
+    for(int i = 0; i < 5; i++)
+    {
+        stock[i] = i * 50;
+    }
+    printf("Stock Details\n");
+    for(int i = 0; i < 5; i++)
+    {
+        printf("%d ", stock[i]);
+    }
+    printf("\n\n");
+
+    int orders[5];
+    printf("Enter 5 order values:\n");
+    for(int i = 0; i < 5; i++)
+    {
+        scanf("%d", &orders[i]); // Fix: Added &
+    }
+
+    int totalOrders = 0;
+    for(int i = 0; i < 5; i++)
+    {
+        totalOrders += orders[i];
+    }
+    printf("Total Orders = %d\n", totalOrders);
+    printf("\n");
+
+    int revenue[5] = {1000, 2000, 3000, 4000, 5000};
+    if(revenue[2] == 3000) // Fix: Used ==
+    {
+        printf("Revenue Matched\n");
+    }
+    printf("\n");
+
+    int backupRevenue[5];
+    for(int i = 0; i < 5; i++) backupRevenue[i] = revenue[i]; // Fix: Loop copy
+    printf("BackupRevenue[0]: %d\n", backupRevenue[0]);
+    printf("\n");
+
+    float commission[5];
+    commission[0] = 2500.50;
+    printf("Commission: %.2f\n", commission[0]);
+    printf("\n");
+
+    char city[10];
+    strcpy(city, "Jaipur");
+    printf("%s\n", city);
+    printf("\n");
+
+    char branch[10] = "IT-A"; // Initialized properly
+    printf("%s\n", branch);
+    printf("\n");
+
+    int employees[5];
+    for(int i = 0; i < 5; i++) employees[i] = i * 100;
+    printf("Employees\n");
+    for(int i = 0; i < 5; i++) printf("%d ", employees[i]);
+    printf("\n\n");
+
+    char department[15];
+    strcpy(department, "Marketing");
+    printf("%s\n", department);
+    printf("\n");
+
+    int expenses[5];
+    for(int i = 0; i < 5; i++) expenses[i] = sales[i];
+    printf("Expenses[0]: %d\n", expenses[0]);
+    printf("\n");
+
+    // Removed invalid index ratings[-1]
+    int ratings[5] = {0};
+    printf("Ratings[0]: %d\n", ratings[0]);
+    printf("\n");
+
+    int feedback[5] = {10, 20, 30, 40, 50};
+    printf("Feedback[0]: %d\n", feedback[0]); // Fix: Cannot print int as string
+    printf("\nReport Generated Successfully\n");
+
+    return 0;
+}
+
+# Question 5
+# Answer
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int marks[10] = {75, 80, 85, 90, 95, 70, 65, 88, 92, 78};
+
+    printf("Student Performance Analysis\n");
+
+    int total = 0;
+    for(int i = 0; i < 10; i++)
+    {
+        total += marks[i];
+    }
+    printf("Total Marks = %d\n", total);
+
+    float average = (float)total / 10.0;
+    printf("Average = %.2f\n", average);
+    printf("\n");
+
+    // Fix: Logical correction for Highest and Lowest
+    int highest = marks[0];
+    for(int i = 1; i < 10; i++)
+    {
+        if(marks[i] > highest) highest = marks[i];
+    }
+    printf("Highest = %d\n", highest);
+
+    int lowest = marks[0];
+    for(int i = 1; i < 10; i++)
+    {
+        if(marks[i] < lowest) lowest = marks[i];
+    }
+    printf("Lowest = %d\n", lowest);
+    printf("\n");
+
+    // Fix: Attendance bounds
+    int attendance[10];
+    for(int i = 0; i < 10; i++) attendance[i] = 1;
+    
+    int present = 0;
+    for(int i = 0; i < 10; i++)
+    {
+        present += attendance[i];
+    }
+    printf("Present Days = %d\n", present);
+    printf("\n");
+
+    char subject[20];
+    strcpy(subject, "DataStructures");
+    printf("%s\n", subject);
+    printf("\n");
+
+    char department[25];
+    strcpy(department, "InformationTechnology");
+    printf("%s\n", department);
+    printf("\n");
+
+    // Fix: Corrected invalid array index assignment
+    int fees[5];
+    for(int i = 0; i < 5; i++) fees[i] = i * 10000;
+    printf("Fees\n");
+    for(int i = 0; i < 5; i++) printf("%d ", fees[i]);
+    printf("\n\n");
+
+    int result[5];
+    printf("Enter 5 result values:\n");
+    for(int i = 0; i < 5; i++) scanf("%d", &result[i]);
+
+    int totalResult = 0;
+    for(int i = 0; i < 5; i++) totalResult += result[i];
+    printf("Total Result = %d\n", totalResult);
+    printf("\n");
+
+    int inventory[5] = {10, 20, 30, 40, 50};
+    if(inventory[2] == 30) printf("Item Found\n");
+    printf("\n");
+
+    int backup[5];
+    for(int i = 0; i < 5; i++) backup[i] = inventory[i];
+    printf("Backup[0]: %d\n", backup[0]);
+    printf("\n");
+
+    float salary[5];
+    salary[0] = 65000.75;
+    printf("Salary: %.2f\n", salary[0]);
+    printf("\n");
+
+    char city[10];
+    strcpy(city, "Jaipur");
+    printf("%s\n", city);
+    printf("\n");
+
+    char branch[10] = "IT-A";
+    printf("%s\n", branch);
+    printf("\n");
+
+    int stock[5];
+    for(int i = 0; i < 5; i++) stock[i] = i * 100;
+    printf("Stock\n");
+    for(int i = 0; i < 5; i++) printf("%d ", stock[i]);
+    printf("\n\n");
+
+    char course[15];
+    strcpy(course, "Programming");
+    printf("%s\n", course);
+    printf("\n");
+
+    // Fix: Removed invalid index access
+    int ratings[5] = {0};
+    printf("Ratings[0]: %d\n", ratings[0]);
+    printf("\n");
+
+    int feedback[5] = {1, 2, 3, 4, 5};
+    printf("Feedback[0]: %d\n", feedback[0]); // Changed to %d for integer
+    printf("\n");
+
+    int scores[5];
+    for(int i = 0; i < 5; i++) scores[i] = marks[i];
+    printf("Scores[0]: %d\n", scores[0]);
+    printf("\n");
+
+    int temp[5];
+    for(int i = 0; i < 5; i++) temp[i] = i;
+    printf("Temp[4]: %d\n", temp[4]); // Fix: Changed index to stay within bounds
+
+    printf("\nProgram Completed Successfully\n");
+    return 0;
+}
