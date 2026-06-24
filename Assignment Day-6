@@ -27,3 +27,70 @@ Q7: while(n>0) { n--; }
 
 Q8: while(n>1) { n/=2; }
 ==> Complexity: O(log n)
+
+Q9: for(int i=1; i<=n; i++) { } for(int j=1; j<=n; j++) { }
+==> Complexity: O(n)
+
+Q10: for(int i=1; i<=n; i++) { } for(int j=1; j<=n*n; j++) { }
+==> Complexity: O(n²)
+
+Q11: for(int i=1; i<=n; i++) { for(int j=1; j<=n*n; j++) { } }
+==> Complexity: O(n³)
+
+Q12: for(int i=1; i<=n; i*=3) { }
+==> Complexity: O(log₃ n) = O(log n)
+
+Q13: for(int i=1; i<=n; i++) { for(int j=1; j<=i*i; j++) { } }
+==> Complexity: O(n³)
+
+Q14: fun(int n) { if(n==0) return; fun(n-1); }
+==> Complexity: O(n)
+
+Q15: fun(int n) { if(n<=1) return; fun(n/2); }
+==> Complexity: O(log n)
+
+Q16: fun(int n) { if(n==0) return; fun(n-1); fun(n-1); }
+==> Complexity: O(2ⁿ)
+
+Q17: fib(int n) { if(n<=1) return n; return fib(n-1)+fib(n-2); }
+==> Complexity: O(2ⁿ)
+
+Q18: fact(int n) { if(n<=1) return 1; return n*fact(n-1); }
+==> Complexity: O(n)
+
+Q19: fun(int n) { if(n<=0) return; fun(n-1); cout<<n; }
+==> Complexity: O(n)
+
+Q20: fun(int n) { if(n<=1) return; fun(n/2); cout<<n; }
+==> Complexity: O(log n)
+
+Q21: T(n)=T(n-1)+1
+==> Complexity: O(n)
+
+Q22: T(n)=T(n-1)+n
+==> Complexity: O(n²)
+
+Q23: T(n)=T(n/2)+1
+==> Complexity: O(log n)
+
+Q24: T(n)=2T(n-1)+1
+==> Complexity: O(2ⁿ)
+
+Q25: T(n)=T(n/2)+n
+==> Complexity: O(n)
+
+Q26: for(i=1; i<=n; i++) { for(j=1; j<=i; j*=2) { } }
+==> Complexity: O(n) (Sum of log i for i=1 to n = log(n!) ≈ O(n log n) 
+- Note: Corrected to O(n log n))
+
+Q27: for(i=1; i<=n; i*=2) { for(j=1; j<=n; j++) { } }
+==> Complexity: O(n log n)
+
+Q28: for(i=n; i>=1; i--) { for(j=i; j>=1; j--) { } }
+==> Complexity: O(n²)
+
+Q29: for(i=1; i<=n; i++) { for(j=1; j<=n; j*=2) { } }
+==> Complexity: O(n log n)
+
+Q30: fun(n) { if(n<=1) return; fun(n/2); fun(n/2); }
+==> Complexity: O(n)
