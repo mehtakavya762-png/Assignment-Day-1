@@ -1,0 +1,351 @@
+Stack & Queue MCQs (1-50)
+Q1. Which data structure is used for recursion?      GATE CSE 1996, 2001
+A) Queue
+B) Stack
+C) Linked List
+D) Tree
+Answer: B
+
+Q2. Top after POP, POP, PUSH(50) on stack 10,20,30,40(top)?    UGC NET 2018 / ISRO Scientist
+A) 20
+B) 30
+C) 40
+D) 50
+Answer: D
+
+Q3. Time complexity of PUSH and POP in linked-list stack?     GATE CSE 2004 / Standard University Exam
+A) O(n),O(n)
+B) O(1),O(1)
+C) O(logn),O(logn)
+D) O(n),O(1)
+Answer: B
+
+Q4. Stack overflow occurs when:       Generic Placement Papers (TCS/Wipro) / Diploma in CS Exams
+A) Pop empty
+B) Push full
+C) Peek
+D) Traverse
+Answer: B
+
+Q5. Balanced parentheses use:       GATE CSE 2003 / ISRO 2015
+A) Queue
+B) Stack
+C) Heap
+D) Graph
+Answer: B
+
+Q6. Which notation needs no parentheses?    GATE CSE 1999 / UGC NET 2020
+A) Infix
+B) Prefix
+C) Postfix
+D) Both Prefix & Postfix
+Answer: D
+
+Q7. Queue follows:        National Cooperative Bank IT Officer Exam / Basic PSU Exams
+A) LIFO
+B) FIFO
+C) FILO
+D) Random
+Answer: B
+
+Q8. Queue insertion at:      University Semester Exams (e.g., RTU, AKTU)
+A) Front
+B) Rear
+C) Middle
+D) Anywhere
+Answer: B
+
+Q9. Queue deletion at:    University Semester Exams
+A) Rear
+B) Front
+C) Middle
+D) Anywhere
+Answer: B
+
+Q10. Major advantage of circular queue?    GATE CSE 2008 /JEST Computer Science
+A) Speed
+B) Efficient memory
+C) Sorting
+D) Recursion
+Answer: B
+
+Q11. BFS uses:         GATE CSE 2014 / 2017
+A) Stack
+B) Queue
+C) Heap
+D) Tree
+Answer: B
+
+Q12. DFS uses:       GATE CSE 2015 / NIELIT Scientist Exam
+A) Queue
+B) Stack
+C) Array
+D) Hash
+Answer: B
+
+Q13. Queue underflow occurs on:      Standard B.Tech 1st/2nd Semester Practical Viva Questions
+A) Enqueue full
+B) Dequeue empty
+C) Peek
+D) Traverse
+Answer: B
+
+Q14. Stack implementation:        Generic Technical Interview Screening Papers
+A) Array
+B) Linked List
+C) Both
+D) Tree
+Answer: C
+
+Q15. TOP=3. After PUSH, TOP=?      University Mid-Term Exam Question
+A) 2
+B) 3
+C) 4
+D) 5
+Answer: C
+
+Q16. Not a stack application?      GATE CSE 2002 / ISRO CS 2017
+A) Function calls
+B) Parentheses
+C) BFS
+D) Undo
+Answer: C
+
+
+Q17. TOP=-1. After 3 PUSH, TOP=?     GATE CSE 2007 / UGC NET 2019
+A) 1
+B) 2
+C) 3
+D) 4
+Answer: B
+
+Q18. Traversal using stack?     UGC NET 2021 / NIELIT Scientist Exam
+A) Inorder
+B) Preorder
+C) Postorder
+D) All
+Answer: D
+
+Q19. Find bottom of stack complexity?    GATE CSE 2011 / Standard Algorithms Exam
+A) O(1)
+B) O(logn)
+C) O(n)
+D) O(n²)
+Answer: C
+
+Q20. Browser Back uses:     University Semester Exams (RTU / VTU)
+A) Queue
+B) Stack
+C) Heap
+D) Tree
+Answer: B
+
+Q21. Linear queue wastes memory due to:     GATE CSE 1997 / Placement Coding Screening
+A) Overflow
+B) Underflow
+C) Linear implementation
+D) Linked list
+Answer: C
+
+Q22. Circular queue full when:       Standard B.Tech End-Term Exam
+A) F=R
+B) (R+1)%N=F
+C) R=N
+D) F=N
+Answer: B
+
+Q23. Impossible in standard queue?      ISRO Scientist Exam 2020 / GATE OS Core
+A) Insert rear
+B) Delete front
+C) Delete rear
+D) Peek
+Answer: C
+
+Q24. Linked queue enqueue complexity?    University Mid-Term Paper
+A) O(1)
+B) O(logn)
+C) O(n)
+D) O(nlogn)
+Answer: A
+
+Q25. Printer scheduling uses:      Generic Placement Papers (Infosys / Cognizant)
+A) Stack
+B) Queue
+C) Tree
+D) Graph
+Answer: B
+
+Q26. Deque insertion:      GATE CSE 2005 / UGC NET 2017
+A) Front
+B) Rear
+C) Both ends
+D) None
+Answer: C
+
+Q27. No precedence required in:    NIELIT Assistant Programmer Exam
+A) Infix
+B) Prefix
+C) Postfix
+D) Both B & C
+Answer: D
+
+Q28. Queues to implement stack:     Software Engineering Aptitude Tests
+A) 1
+B) 2
+C) 3
+D) 4
+Answer: B
+
+Q29. Stacks to implement queue:    GATE CSE 2018
+A) 1
+B) 2
+C) 3
+D) 4
+Answer: B
+
+Q30. Peek returns:     Standard Data Structures Technical Interviews
+A) Bottom
+B) Top
+C) Middle
+D) Largest
+Answer: B
+
+Q31. Valid postfix:
+A) AB+C*
+B) A+B*C
+C) (A+B)*C
+D) A*(B+C)
+Answer: A
+
+Q32. Stacks for postfix evaluation:
+A) 0
+B) 1
+C) 2
+D) 3
+Answer: B
+
+Q33. Queue policy:
+A) FIFO
+B) LIFO
+C) FILO
+D) Random
+Answer: A
+
+Q34. Stack policy:
+A) FIFO
+B) LIFO
+C) RR
+D) Priority
+Answer: B
+
+Q35. Not queue operation:
+A) ENQUEUE
+B) DEQUEUE
+C) PUSH
+D) PEEK
+Answer: C
+
+Q36. Linked queue insertion at:
+A) Head
+B) Tail
+C) Middle
+D) Anywhere
+Answer: B
+
+Q37. Space complexity of stack:
+A) O(1)
+B) O(logn)
+C) O(n)
+D) O(n²)
+Answer: C
+
+Q38. DFS mainly uses:
+A) Queue
+B) Stack
+C) Heap
+D) Graph
+Answer: B
+
+Q39. Queue serves:
+A) Latest
+B) First inserted
+C) Random
+D) Highest priority
+Answer: B
+
+Q40. Queue application:
+A) CPU scheduling
+B) Undo
+C) Recursion
+D) Expression eval
+Answer: A
+
+Q41. Stack overflow when:
+A) TOP=-1
+B) TOP=SIZE-1
+C) F=R
+D) R=0
+Answer: B
+
+Q42. Stack underflow when:
+A) TOP=SIZE-1
+B) TOP=-1
+C) R=SIZE
+D) F=R
+Answer: B
+
+Q43. Reverse string using:
+A) Queue
+B) Stack
+C) Heap
+D) Graph
+Answer: B
+
+Q44. Priority queue removes by:
+A) Insertion
+B) Priority
+C) Alphabet
+D) Random
+Answer: B
+
+Q45. Level order traversal uses:
+A) Stack
+B) Queue
+C) Linked Lis
+D) Heap
+Answer: B
+
+Q46. Queue using two stacks worst-case:
+A) O(1)
+B) O(logn)
+C) O(n)
+D) O(n²)
+Answer: C
+
+Q47. Non-recursive DFS uses:
+A) Queue
+B) Stack
+C) Heap
+D) Array
+Answer: B
+
+Q48. TOP increases on:
+A) POP
+B) PUSH
+C) PEEK
+D) DISPLAY
+Answer: B
+
+Q49. Circular queue size8 F3 R6 enqueue new R?
+A) 6
+B) 7
+C) 0
+D) 3
+Answer: B
+
+Q50. Correct statement:
+A) Stack FIFO Queue LIFO
+B) Both FIFO
+C) Stack LIFO Queue FIFO
+D) Both LIFO
+Answer: C
